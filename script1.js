@@ -21,3 +21,13 @@ const a = curry();
 const b = a(1)(14)(6)(1)();
 
 console.log(b);
+
+// const cur = (a) => {
+//   return (b) => {
+//     return (c) => {
+//       return a + b + c;
+//     };
+//   };
+// };
+
+// console.log(cur(1)(2)(3));
