@@ -24,8 +24,10 @@ const Tasks = () => {
     const promise1 = new Promise((res, rej) => {
       res();
     });
-    promise1.then(() => console.log("3) third promise"));
+    promise1.then(() => console.log("3) third promise")).then(() => {});
     //чтобы выполнить позже промиса
+
+    //либо можно можно запихнуть в then
     queueMicrotask(() => {
       block.innerHTML = "change";
       console.log("3) InnerHTML: " + block.innerHTML);
